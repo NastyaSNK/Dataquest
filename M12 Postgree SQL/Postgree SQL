@@ -1,0 +1,85 @@
+PostgreSQL database
+
+Connecting to a PostgreSQL database called "postgres" with a user called "postgres":
+
+import psycopg2
+conn = psycopg2.connect("dbname=postgres user=postgres")
+
+Initializing a Cursor object:
+
+conn.cursor()
+
+Closing the database connection:
+
+conn.close()
+
+Creating a table:
+
+CREATE TABLE tableName(
+   column1 dataType1 PRIMARY KEY,
+   column2 dataType2,
+   column3 dataType3,
+   ...
+   );
+
+Executing a query:
+
+cur.execute("SELECT * FROM notes;")
+
+Applying the changes to the database:
+
+conn.commit()
+
+Removing a SQL transaction:
+
+conn.rollback()
+
+Activating autocommit:
+
+conn.autocommit = True
+
+Fetching one result:
+
+cur.fetchone()
+
+Fetching all rows in the table:
+
+cur.fetchall()
+
+Inserting rows into a table:
+
+INSERT INTO tableName
+VALUES (value1, value2, ...);
+
+Specifying an owner when creating a database:
+
+CREATE DATABASE income OWNER dq;
+
+Removing a database:
+
+DROP DATABASE income;
+
+Concepts
+SQLite doesn't allow for restricting access to a database.
+PostgreSQL is the most commonly used database engine. It is powerful and open source (free to download and use).
+
+Multi-column indexing: Takeaways
+by Dataquest Labs, Inc. - All rights reserved © 2019
+Syntax
+Creating a multi-column index:
+
+CREATE INDEX index_name ON table_name(column_name_1, column_name_2);
+
+Concepts
+When there are two possible indexes available, SQLite tries to estimate which index will result in better performance. However, SQLite is not good estimating and will often end up picking an index at random.
+Use a multi-column index when data satisfying multiple conditions, in multiple columns, is to be retrieved.
+When creating a multi-column index, the first column in the parentheses becomes the primary key for the index.
+A covering index contains all the information necessary to answer a query.
+Covering indexes don't apply just to multi-column indexes.
+PostgreSQL allows you to create multiple databases.
+PostgreSQL consists of a server and clients
+
+A server is a program that manages databases and handles queries.
+Clients communicate back and forth to the server. Multiple clients can communicate with the server at the same time.
+The most common Python client for PostgreSQL is called psycopg2`.
+PostgreSQL uses SQL transactions to prevent changes made in the database if any of the transactions fail.
