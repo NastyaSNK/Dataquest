@@ -13,3 +13,5 @@ This repository is a series of notebooks that show solutions for the projects at
 [Project: Building Handwritten Digits Classifier MLPClassifier NN](https://github.com/NeznaikanaLune/Dataquest/blob/master/M17_Building%20A%20Handwritten%20Digits%20Classifier/Guided%2BProject%2BCNN.ipynb)
 
 [Project: Mobile App for Lottery Addiction Combination,probability](https://github.com/NeznaikanaLune/Dataquest/blob/master/M18_Lottery%20addiction%20mob%20app/Lottery%20addiction.ipynb)
+
+[Project: Building a Spam Filter with Naive Bayes](https://github.com/NeznaikanaLune/Dataquest/blob/master/M19_Building%20a%20Spam%20Filter%20with%20Naive%20Bayes/Building%20a%20Spam%20Filter%20with%20Naive%20Bayes.ipynb)
